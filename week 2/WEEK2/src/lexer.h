@@ -41,7 +41,7 @@ private:
     Token readNumber();
 };
 
-// Utility for printing token type
+// utility for printing token type
 inline std::string token_type_to_string(TokenType type) {
     switch (type) {
         case TokenType::KEYWORD: return "KEYWORD";

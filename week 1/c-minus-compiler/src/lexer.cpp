@@ -59,7 +59,7 @@ std::vector<Token> Lexer::tokenize() {
         } else if (isdigit(ch)) {
             tokens.push_back(readNumber());
         } else {
-            // Skipping operators & delimiters for now
+            // skipping operators & delimiters for now
             advance();
         }
     }

@@ -67,12 +67,12 @@ std::vector<Token> Lexer::tokenize() {
         } else if (isdigit(ch)) {
             tokens.push_back(readNumber());
         }
-        // Handle delimiters
+        // handle delimiters
         else if (std::string("(){}[];,").find(ch) != std::string::npos) {
             tokens.push_back(Token(TokenType::DELIMITER, std::string(1, ch), line, column));
             advance();
         }
-        // Handle operators (including two-char ones)
+        // handle operators (including two-char ones)
         else if (std::string("+-*/=<>!").find(ch) != std::string::npos) {
             std::string op(1, ch);
             char next = peek_char();
@@ -83,7 +83,7 @@ std::vector<Token> Lexer::tokenize() {
             tokens.push_back(Token(TokenType::OPERATOR, op, line, column));
             advance();
         }
-        // Unknown character — skip for now
+        // unknown character — skip for now
         else {
             advance();
         }

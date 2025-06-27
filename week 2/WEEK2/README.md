@@ -24,4 +24,3 @@ AST:
 BinaryOp(+)
   Number(2)
   Number(3)
-himu23@ideapad3:~/Desktop/projects/soc-now-u-
